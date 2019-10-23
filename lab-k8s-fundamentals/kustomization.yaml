@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: lab-k8s-fundamentals
+
+resources:
+- namespace.yaml
+
+bases:
+- https://github.com/openshift-labs/lab-k8s-fundamentals/.workshop?ref=master
+
+patchesJson6902:
+- target:
+    group: extensions
+    version: v1beta1
+    kind: Ingress
+    name: spawner
+  path: ingress.yaml
+
+configMapGenerator:
+- name: spawner-environ
+  behavior: merge
+  env: settings.txt

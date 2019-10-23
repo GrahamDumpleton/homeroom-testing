@@ -1,0 +1,2 @@
+HOMEROOM_LINK=http://homeroom.192.168.64.48.nip.io
+SERVER_LIMIT=4
