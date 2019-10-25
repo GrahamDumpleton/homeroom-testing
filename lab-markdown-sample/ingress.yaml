@@ -1,3 +1,3 @@
 - op: replace
   path: /spec/rules/0/host
-  value: "lab-markdown-sample.192.168.64.48.nip.io"
+  value: "lab-markdown-sample.${CLUSTER_SUBDOMAIN}"

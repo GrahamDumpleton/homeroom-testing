@@ -1,2 +1,2 @@
-HOMEROOM_LINK=http://homeroom.192.168.64.48.nip.io
+HOMEROOM_LINK=http://homeroom.${CLUSTER_SUBDOMAIN}
 SERVER_LIMIT=4
