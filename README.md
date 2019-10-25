@@ -8,7 +8,7 @@ Work out the cluster subdomain for ingress.
 Then run:
 
 ```
-kustomize build https://github.com/GrahamDumpleton/homeroom-testing | CLUSTER_SUBDOMAIN=A.B.C.D.nip.io envsubst CLUSTER_SUBDOMAIN |  kubectl apply -f -
+kustomize build https://github.com/GrahamDumpleton/homeroom-testing | CLUSTER_SUBDOMAIN=A.B.C.D.nip.io envsubst | kubectl apply -f -
 ```
 
 Access:
@@ -22,5 +22,5 @@ with whatever sub domain you changed hosts to.
 To delete everything when done, run:
 
 ```
-kustomize build https://github.com/GrahamDumpleton/homeroom-testing | CLUSTER_SUBDOMAIN=A.B.C.D.nip.io envsubst CLUSTER_SUBDOMAIN |  kubectl delete -f -
+kustomize build https://github.com/GrahamDumpleton/homeroom-testing | CLUSTER_SUBDOMAIN=A.B.C.D.nip.io envsubst | kubectl delete -f -
 ```
