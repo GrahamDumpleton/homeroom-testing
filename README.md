@@ -3,7 +3,8 @@ To test this repository, you will need `kustomize` and `envsubst`.
 First ensure you are logged in to your OpenShift/Kubernetes cluster
 with cluster admin privileges.
 
-Work out the cluster subdomain for ingress.
+Work out the cluster subdomain for ingress as you will need to substitute
+it for `A.B.C.D.nip.io` in the following commands.
 
 Then run:
 
