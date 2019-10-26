@@ -9,14 +9,6 @@ resources:
 bases:
 - https://github.com/openshift-homeroom/workshop-homeroom?ref=develop
 
-patchesJson6902:
-- target:
-    group: extensions
-    version: v1beta1
-    kind: Ingress
-    name: homeroom
-  path: ingress.yaml
-
 configMapGenerator:
 - name: homeroom-configs
   behavior: merge

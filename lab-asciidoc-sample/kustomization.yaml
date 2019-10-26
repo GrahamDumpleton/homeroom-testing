@@ -9,14 +9,6 @@ resources:
 bases:
 - https://github.com/openshift-homeroom/lab-asciidoc-sample/.workshop?ref=1.9
 
-patchesJson6902:
-- target:
-    group: extensions
-    version: v1beta1
-    kind: Ingress
-    name: spawner
-  path: ingress.yaml
-
 configMapGenerator:
 - name: spawner-environ
   behavior: merge

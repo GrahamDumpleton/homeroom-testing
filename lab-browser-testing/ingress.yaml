@@ -1,3 +1,0 @@
-- op: replace
-  path: /spec/rules/0/host
-  value: "lab-browser-testing.${CLUSTER_SUBDOMAIN}"
