@@ -7,7 +7,7 @@ resources:
 - namespace.yaml
 
 bases:
-- https://github.com/openshift-homeroom/lab-asciidoc-sample/.workshop?ref=1.9
+- https://github.com/openshift-homeroom/lab-asciidoc-sample/.workshop?ref=master
 
 configMapGenerator:
 - name: spawner-environ
