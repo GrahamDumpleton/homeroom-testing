@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: spawner
+  annotations:
+    homeroom/title: "Starter Guides (PHP)"
+    homeroom/description: "Getting Started with OpenShift for PHP Developers"
+spec:
+  rules:
+  - host: "lab-gs-php.${CLUSTER_SUBDOMAIN}"
+    http:
+      paths:
+      - path: "/"
+        backend:
+          serviceName: spawner
+          servicePort: 8080

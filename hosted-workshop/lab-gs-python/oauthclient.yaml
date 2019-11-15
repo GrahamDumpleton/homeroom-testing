@@ -1,0 +1,6 @@
+kind: OAuthClient
+apiVersion: oauth.openshift.io/v1
+metadata:
+  name: console
+redirectURIs:
+- http://lab-gs-python.${CLUSTER_SUBDOMAIN}/hub/oauth_callback

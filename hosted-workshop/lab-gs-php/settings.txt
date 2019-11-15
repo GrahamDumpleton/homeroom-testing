@@ -1,0 +1,17 @@
+WORKSHOP_NAME=lab-gs-php
+
+WORKSHOP_TITLE="Getting Started with OpenShift"
+WORKSHOP_DESCRIPTION="A workshop introducing developers to OpenShift"
+
+WORKSHOP_FILE=php-workshop.yml
+
+WORKSHOP_IMAGE=quay.io/openshiftlabs/lab-getting-started:ocp-4.2
+CONSOLE_IMAGE=quay.io/openshift/origin-console:4.2
+
+HOMEROOM_LINK=http://homeroom.${CLUSTER_SUBDOMAIN}
+
+RESOURCE_BUDGET=x-large
+MAX_SESSION_AGE=7200
+IDLE_TIMEOUT=300
+
+OPENSHIFT_PROJECT={username}

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: cache
+spec:
+  template:
+    spec:
+      initContainers:
+      - name: workshop-image
+        image: quay.io/openshiftlabs/lab-getting-started:ocp-4.2
+        imagePullPolicy: Always
+        command: ["/bin/true"]
+        resources:
+          limits:
+            memory: 128Mi
+          requests:
+            memory: 128Mi
+      - name: console-image
+        image: quay.io/openshift/origin-console:4.2
+        imagePullPolicy: Always
+        command: ["/bin/true"]
+        resources:
+          limits:
+            memory: 128Mi
+          requests:
+            memory: 128Mi
+      - name: parksmap-image
+        image: docker.io/openshiftroadshow/parksmap:1.3.0
+        imagePullPolicy: Always
+        command: ["/bin/true"]
+        resources:
+          limits:
+            memory: 128Mi
+          requests:
+            memory: 128Mi
+      containers:
+      containers:
+      - name: pause
+        image: gcr.io/google_containers/pause
+        resources:
+          limits:
+            memory: 128Mi
+          requests:
+            memory: 128Mi
