@@ -9,7 +9,7 @@ it for `A.B.C.D.nip.io` in the following commands.
 Then run:
 
 ```
-kustomize build https://github.com/GrahamDumpleton/homeroom-testing | CLUSTER_SUBDOMAIN=A.B.C.D.nip.io envsubst '$CLUSTER_SUBDOMAIN' | kubectl apply -f -
+kustomize build https://github.com/GrahamDumpleton/homeroom-testing/learning-portal | CLUSTER_SUBDOMAIN=A.B.C.D.nip.io envsubst '$CLUSTER_SUBDOMAIN' | kubectl apply -f -
 ```
 
 Access:
@@ -23,5 +23,5 @@ with whatever sub domain you specified.
 To delete everything when done, run:
 
 ```
-kustomize build https://github.com/GrahamDumpleton/homeroom-testing | CLUSTER_SUBDOMAIN=A.B.C.D.nip.io envsubst '$CLUSTER_SUBDOMAIN' | kubectl delete -f -
+kustomize build https://github.com/GrahamDumpleton/homeroom-testing/learning-portal | CLUSTER_SUBDOMAIN=A.B.C.D.nip.io envsubst '$CLUSTER_SUBDOMAIN' | kubectl delete -f -
 ```
